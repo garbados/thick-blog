@@ -1,13 +1,13 @@
 {{#> layout }}
-{{#with entry}}
-<div class="box">
-  <p><a href="/entries/{{name}}.html">&gt; {{title}}</a></p>
-  <hr>
-  <div class="content">
-    {{{html}}}
-  </div>
-  <hr>
-  <p><small><em>{{created_at}}</em></small></p>
-</div>
-{{/with}}
+  {{#with entry}}
+    <div class="box">
+      <p><a href="/entries/{{name}}.html">&gt; {{title}}</a></p>
+      <hr>
+      <div class="content">
+        {{{html}}}
+      </div>
+      <hr>
+      <p><small><em>{{created_at}}</em></small></p>
+    </div>
+  {{/with}}
 {{/layout}}
