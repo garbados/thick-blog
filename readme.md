@@ -1,4 +1,6 @@
-# thick-blog
+# THICK-blog
+
+[![Build Status](https://travis-ci.org/garbados/thick-blog.svg?branch=master)](https://travis-ci.org/garbados/thick-blog)
 
 Hello!
 
@@ -11,16 +13,16 @@ This is a static blog template following the [thick application model](https://b
 You can use [git](https://git-scm.com/):
 
 ```
-git clone garbados/thick-blog
+git clone git@github.com:garbados/thick-blog.git
 cd thick-blog
 git remote remove origin
 git remote add origin <your-blog-repo>
 ```
 
-Or you can use [Dat](https://datproject.org/), by forking this address: `TODO`
+Or you can use [Dat](https://datproject.org/), by forking this address: `dat://95a964430e5a5c5203dde674a1873e51f2e8e78995855c1481020f405ee9a772`
 
 ```
-dat clone TODO thick-blog
+dat clone dat://95a964430e5a5c5203dde674a1873e51f2e8e78995855c1481020f405ee9a772 thick-blog
 cd thick-blog
 rm -rf .dat
 dat share .
@@ -56,4 +58,36 @@ This will convert each markdown file contained in `entries/` into a stand-alone 
 
 ### Editing the site template
 
-TODO
+THICK-blog uses [handlebars](http://handlebarsjs.com/) as its templating language and [Bulma](https://bulma.io/) for styling. Templates are stored in the `templates/` folder. There are only three templates:
+
+- `layout.hbs`: Wraps both the index and entry templates, providing basic and consistent formatting. It primarily relies on the `config` object.
+- `ìndex.hbs`: Displays summaries of each entry, including title, description, and timestamp. It receives an `entries` object describing each entry in the blog.
+- `entry.hbs`: Displays a single entry. It receives an `entry` object describing a single blog entry.
+
+The `config` object is derived from `config.json`. Updating that will update the site when it builds.
+
+The `entry` object looks like this:
+
+```
+{
+  name: 'hello',
+  title: 'H E L L O W O R L D',
+  description: 'About this blog and the THICK application model.',
+  created_at: 2017-11-16T06:26:53.890Z,
+  html: '<h1 id="hello-world-">Hello, world!</h1>...'
+}
+```
+
+The `entries` object is an array of `entry` objects.
+
+### Hacking on your Blog
+
+To re-build the blog as you work on it, run `npm run watch`. Running that while also sharing the archive over Dat will allow peers to watch as you make changes. It will re-build the blog whenever a markdown or template file changes.
+
+### Contributing
+
+If you'd like to contribute to THICK-blog or otherwise hack on Dat tech, contact me over [Mastodon](https://toot.cat/@garbados). You can also [file an issue]() or [issue a PR]() if that's more your speed.
+
+### License
+
+[GPL-3.0](https://opensource.org/licenses/gpl-3.0.html)
