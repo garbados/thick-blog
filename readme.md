@@ -86,7 +86,7 @@ To re-build the blog as you work on it, run `npm run watch`. Running that while 
 
 ### Contributing
 
-If you'd like to contribute to THICK-blog or otherwise hack on Dat tech, contact me over [Mastodon](https://toot.cat/@garbados). You can also [file an issue]() or [issue a PR]() if that's more your speed.
+If you'd like to contribute to THICK-blog or otherwise hack on Dat tech, contact me over [Mastodon](https://toot.cat/@garbados). You can also [file an issue](https://github.com/garbados/thick-blog/issues) or [issue a PR](https://github.com/garbados/thick-blog/pulls) if that's more your speed.
 
 ### License
 
