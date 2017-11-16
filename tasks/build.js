@@ -36,7 +36,6 @@ async.waterfall([
         html: entry.html
       }
     }).sort((a, b) => {
-      // TODO sort entries by created_at
       return (a.created_at < b.created_at) ? 1 : -1
     })
     async.parallel([
