@@ -44,8 +44,6 @@ npm run new-entry -- [name]
 
 This will add a new entry to the `entries` folder based on a template. The file will be named `[name].md`. The `[name]` value defaults to the current date and time.
 
-If you have specified your code editing program in the `$ÈDITOR` environment variable, it will be used to open the file for editing.
-
 ### Building the static HTML
 
 Build the site's static assets using the `build` script:
