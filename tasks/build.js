@@ -32,11 +32,11 @@ async.waterfall([
         name: name,
         title: entry.meta.title,
         description: entry.meta.description,
-        created_at: entry.meta.created_at,
+        createdAt: entry.meta.createdAt,
         html: entry.html
       }
     }).sort((a, b) => {
-      return (a.created_at < b.created_at) ? 1 : -1
+      return (a.createdAt < b.createdAt) ? 1 : -1
     })
     async.parallel([
       fs.readFile.bind(fs, templatePathJoin('layout.hbs'), FORMAT),
@@ -59,7 +59,7 @@ async.waterfall([
         async.parallel([
           fs.writeFile.bind(fs, pathJoin('index.html'), index, FORMAT),
           async.map.bind(async, entries, (entry, done) => {
-            fs.writeFile(pathJoin('entries', `${entry.name}.html`), entry.html, done)
+            fs.writeFile(pathJoin(`${entry.name}.html`), entry.html, done)
           })
         ], done)
       }

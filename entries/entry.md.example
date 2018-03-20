@@ -2,7 +2,7 @@ title: TODO
 description: TODO
 tags:
 - TODO
-created_at: {{datetime}}
+createdAt: {{datetime}}
 
 # Hello, world!
 

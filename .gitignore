@@ -1,4 +1,6 @@
 node_modules
 .dat
-index.html
-entries/*.html
+*.html
+rss.xml
+package-lock.json
+style.css
