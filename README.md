@@ -71,7 +71,7 @@ The `entry` object looks like this:
   name: 'hello',
   title: 'H E L L O W O R L D',
   description: 'About this blog and the THICK application model.',
-  created_at: 2017-11-16T06:26:53.890Z,
+  createdAt: 2017-11-16T06:26:53.890Z,
   html: '<h1 id="hello-world-">Hello, world!</h1>...'
 }
 ```
